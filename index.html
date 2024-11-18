@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clipboard landing page | Mohamed</title>
+  <style>
+    *{
+      margin: 0;
+      font-family: Bai Jamjuree;
+    }
+
+    section {
+      padding: 30px;
+    }
+
+    body {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 250px;
+    }
+
+    .section-one {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      background-image: url('Assets/background/bg-header-desktop.png');
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+
+    .flex-one {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 600px;
+      padding-top: 100px;
+    }
+
+    .section-one img {
+      width: 100px;
+      margin-bottom: 50px;
+    }
+
+    h1 {
+      font-size: 35px;
+      font-weight: 500;
+      color: hsl(210, 10%, 33%);
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .section-one p {
+      color: hsl(201, 11%, 66%);
+      text-align: center;
+    }
+
+    .one-buttons {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+
+    .one-buttons button {
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.219);
+      cursor: pointer;
+    }
+
+    .section-two {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 100px;
+    }
+
+    .keep-track{
+      max-width: 630px;
+      align-items: center;
+      align-self: center;
+    }
+    .keep-track h2{
+      text-align: center;
+      color: hsl(210, 10%, 33%);
+    }
+
+    .keep-track p {
+      color: hsl(201, 11%, 66%);
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .pc-flex {
+      display: flex;
+      flex-direction: row;
+      margin-top: 50px;
+    }
+
+    .quick {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      max-width: 350px;
+      padding-left: 100px;
+      padding-top: 70px;
+    }
+
+    .pc {
+      object-fit: cover;
+      width: 50%;
+    }
+    
+    h3 {
+      color: hsl(210, 10%, 33%);
+    }
+
+    .quick p {
+      color: hsl(201, 11%, 66%);
+      line-height: 30px;
+      margin-top: 10px;
+    }
+
+    .section-three {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 100px;
+      margin-top: 100px;
+    }
+
+    .section-three div {
+      align-items: center;
+      flex-direction: column;
+      display: flex;
+      gap: 20px;
+    }
+
+    .section-three h2 {
+      color: hsl(210, 10%, 33%);
+      text-align: center;
+    }
+
+    .section-three p {
+      color: hsl(201, 11%, 66%);
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .section-three img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .section-four {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .four-first {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .four-first h2 {
+      color: hsl(210, 10%, 33%);
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .four-first p {
+      text-align: center;
+      color: hsl(201, 11%, 66%);
+    }
+
+    .four-second {
+      display: flex;
+      flex-direction: row;
+      margin-top: 100px;
+      gap: 150px;
+      align-items: center;
+    }
+
+    .sec-four {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .sec-four img {
+      width: 40px;
+      object-fit: cover;
+    }
+
+    .sec-four p {
+      text-align: center;
+      color: hsl(201, 11%, 66%);
+      font-size: 13px;
+      max-width: 250px;
+      line-height: 20px;
+    }
+
+    .logos {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 90px;
+      margin-top: 150px;
+    }
+
+    .section-five {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 150px;
+    }
+
+    .clip-five h2 {
+      text-align: center;
+      color: hsl(210, 10%, 33%);
+      margin-bottom: 25px;
+    }
+
+    .clip-five p {
+      color: hsl(201, 11%, 66%);
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      background-color: hsl(195, 21%, 93%);
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      margin-top: 100px;
+    }
+
+    .logo {
+      width: 50px;
+      margin-left: 200px;
+    }
+
+    .nav-footer {
+      display: flex;
+      flex-direction: row;
+      gap: 80px;
+      color: rgb(92, 92, 92);
+      margin-left: 100px;
+    }
+
+    .sec-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .sec-footer div {
+      transition: 0.15s ease;
+    }
+
+    .mono {
+      display: flex;
+      flex-direction: column;
+      height: 10px;
+      transition: 0.15s ease;
+      cursor: pointer;
+    }
+
+    .sec-footer div:hover,
+    .mono:hover {
+      color:hsl(171, 66%, 44%);
+    }
+
+    .social {
+      gap: 20px;
+      display: flex;
+      flex-direction: row;
+      margin-left: 400px;
+      cursor: pointer;
+    }
+
+    @media (max-width:1200px){
+
+      body main {
+        margin-bottom: 450px;
+      }
+      .flex-one .one-buttons {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .section-two .pc-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .section-two .quick {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        padding-top: 30px;
+      }
+
+      .quick div {
+        text-align: center;
+        
+      }
+
+      .section-four .four-second {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+      }
+
+      .section-four .logos {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .section-five .one-buttons {
+        display: flex;
+        flex-direction: column;
+      }
+
+      body .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer .nav-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        gap: 0;
+        margin-bottom: 30px;
+      }
+
+      .footer .social {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+      }
+
+      .footer .logo {
+        margin: 0;
+        margin-bottom: 20px;
+      }
+
+      .footer .sec-footer {
+        align-items: center;
+      }
+
+      .sec-footer {
+        gap: 0;
+      }
+    }
+
+    @media (max-width: 800px) {
+      main .section-one {
+        background-image: url('Assets/background/bg-header-mobile.png');
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <main>
+    <section class="section-one">
+      <div class="flex-one">
+        <img src="Assets\logos\logo.svg" alt="">
+        <h1>A history of everything you copy</h1>
+        <p>
+          Clipboard allows you to track and organize everything you copy. Instantly accsess your clipboard on all your devices.
+        </p>
+        <div class="one-buttons">
+          <button style="background-color: hsl(171, 66%, 44%); box-shadow: 0px 0px 48px -10px rgba(38,186,164,0.5);">
+            Download for iOS
+          </button>
+          <button style="background-color: hsl(233, 100%, 69%); box-shadow: 0px 0px 48px -10px rgba(97,115,255,0.5);">
+            Download for Mac
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="section-two">
+      <div class="keep-track">
+        <h2>
+          Keep track of your snippets
+        </h2>
+        <p>
+          Clipboard instantly stores any item you copy in the cloud, meaning you can access your snippets immediately on all your devices. Our Mac and iOS apps will help you organize everything.
+        </p>
+      </div>
+      <div class="pc-flex">
+        <img class="pc" src="Assets\images\image-computer.png" alt="">
+        <div class="quick">
+          <div>
+            <h3>Quick Search</h3>
+            <p>
+              Easily search your snippets by content, category, web address, appliction, and more.
+            </p>
+          </div>
+          <div>
+            <h3>iCloud Sync</h3>
+            <p>
+              Instantly saves and syncs snippets across all your devices.
+            </p>
+          </div>
+          <div>
+            <h3>Complete History</h3>
+            <p>
+              Retrieve any snippets from the first moment you started using the app.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-three">
+      <div>
+        <h2>Access Clipboard anywhere</h2>
+        <p>Whether you're on the go, or at your computer, you can access all your Clipboard snippets in a few simple clicks.</p>
+      </div>
+      <img src="Assets\images\image-devices.png" alt="">
+    </section>
+    <section class="section-four">
+      <div class="four-first">
+        <h2>Supercharge your workflow</h2>
+        <p>We've got the tools to boost your productivity</p>
+      </div>
+      <div class="four-second">
+        <div class="sec-four">
+          <img src="Assets\icons\icon-blacklist.svg" alt="">
+          <h3>Create blacklists</h3>
+          <p>Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+        </div>
+        <div class="sec-four">
+          <img src="Assets\icons\icon-text.svg" alt="">
+          <h3>Plain text snippets</h3>
+          <p>Remove unwanted formatting from copied text for a consistent look.</p>
+        </div>
+        <div class="sec-four">
+          <img src="Assets\icons\icon-preview.svg" alt="">
+          <h3>Sneak preview</h3>
+          <p>Quick preview of all snippets on your clipboard for easy access.</p>
+        </div>
+      </div>
+      <div class="logos">
+        <img src="Assets\logos\logo-google.png" alt="">
+        <img src="Assets\logos\logo-ibm.png" alt="">
+        <img src="Assets\logos\logo-microsoft.png" alt="">
+        <img src="Assets\logos\logo-hp.png" alt="">
+        <img src="Assets\logos\logo-vector-graphics.png" alt="">
+      </div>
+    </section>
+    <section class="section-five">
+      <div class="clip-five">
+        <h2>
+          Clipboard for iOS and Mac OS
+        </h2>
+        <p>
+          Available for free on the App Store. Download for Mac or iOS, sync with iCloud and you,re ready to start adding to your clipboard.
+        </p>
+      </div>
+      <div class="one-buttons">
+        <button style="background-color: hsl(171, 66%, 44%); box-shadow: 0px 0px 48px -10px rgba(38,186,164,0.5);">
+          Download for iOS
+        </button>
+        <button style="background-color: hsl(233, 100%, 69%); box-shadow: 0px 0px 48px -10px rgba(97,115,255,0.5);">
+          Download for Mac
+        </button>
+      </div>
+    </div>
+    </section>
+  </main>
+  <section class="footer">
+    <img class="logo" src="Assets\logos\logo.svg" alt="">
+    <div class="nav-footer">
+      <div class="sec-footer">
+        <div>FAQs</div>
+        <div>Contact Us</div>
+      </div>
+      <div class="sec-footer">
+        <div>Privacy Policy</div>
+        <div>Press Kit</div>
+      </div>
+      <div class="mono">Install Guide</div>
+    </div>
+    <div class="social">
+      <img class="fb" src="Assets\icons\icon-facebook.svg" alt="">
+      <img src="Assets\icons\icon-twitter.svg" alt="">
+      <img src="Assets\icons\icon-instagram.svg" alt="">
+    </div>
+  </section>
+</body>
+</html>
